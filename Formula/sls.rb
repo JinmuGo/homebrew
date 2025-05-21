@@ -5,22 +5,22 @@
 class Sls < Formula
   desc "A smart fuzzy CLI selector for SSH config hosts"
   homepage "https://github.com/jinmugo/sls"
-  version "0.1.0"
+  version "0.1.1"
 
   depends_on "fzf"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jinmugo/sls/releases/download/0.1.0/sls_Darwin_x86_64.tar.gz"
-      sha256 "f10c648288c2196a1069aef780cf4fd53fc19184054783dff1f11990d036ede2"
+      url "https://github.com/jinmugo/sls/releases/download/0.1.1/sls_Darwin_x86_64.tar.gz"
+      sha256 "50bcb483d866d04a02eff58644cf6e45c6bda220ebe98f1ee4071418cbdef716"
 
       def install
         bin.install "sls"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jinmugo/sls/releases/download/0.1.0/sls_Darwin_arm64.tar.gz"
-      sha256 "ebab0e69c52f78683dce1c101eca3f682879a09f4da6be4a34616c0b8e32b672"
+      url "https://github.com/jinmugo/sls/releases/download/0.1.1/sls_Darwin_arm64.tar.gz"
+      sha256 "8414f2b163e274ecc589cca4d74f11dcfba9de58c99dc35f36ed91d77427ade9"
 
       def install
         bin.install "sls"
@@ -30,15 +30,15 @@ class Sls < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jinmugo/sls/releases/download/0.1.0/sls_Linux_x86_64.tar.gz"
-      sha256 "c5532e3802b8abbf600a62c39631c04f258ded122db01c38a1b256b7f720229c"
+      url "https://github.com/jinmugo/sls/releases/download/0.1.1/sls_Linux_x86_64.tar.gz"
+      sha256 "396002ec87f7c08d7330de3c159e445ecb12011439cb6cf0f94030c741fdc202"
       def install
         bin.install "sls"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jinmugo/sls/releases/download/0.1.0/sls_Linux_arm64.tar.gz"
-      sha256 "f39ffe461b18e723dbd917d227d2ed202dd7979d4a832caf011fef515177e307"
+      url "https://github.com/jinmugo/sls/releases/download/0.1.1/sls_Linux_arm64.tar.gz"
+      sha256 "296eb7f01968787627f102d54c593dd5b0f3717dbc5babf57be3692f0ec4acca"
       def install
         bin.install "sls"
       end
